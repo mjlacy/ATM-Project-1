@@ -24,6 +24,7 @@ class Account implements Serializable{
     private boolean firstdateflag = false;
     private int acctNumber;
     private String acctName;
+    private String acctPIN;
     
     Account(){}
     
@@ -31,15 +32,19 @@ class Account implements Serializable{
         balance = bal;
     }  
     
-    Account(int bal, int num, String name){
+    Account(int bal, int num, String name, String PIN){
         balance = bal;
         acctNumber = num;
         acctName = name;
-        
+        acctPIN = PIN;
     }
     
     String getName(){
         return acctName;
+    }
+    
+    String getPIN(){
+        return acctPIN;
     }
     
     void Menu()
