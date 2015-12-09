@@ -13,24 +13,18 @@ import java.util.*;
  */
 class Account implements Serializable{
     
-    private double balance;
-    private double rate;
-    private int firstdate;
-    private int firstyear;
-    private int seconddate;
-    private int secondyear;
-    private Calendar date1 = new GregorianCalendar();
-    private Calendar date2 = new GregorianCalendar();
-    private boolean firstdateflag = false;
-    private int acctNumber;
-    private String acctName;
-    private String acctPIN;
-    
-    Account(){}
-    
-    Account(int bal){
-        balance = bal;
-    }  
+    protected double balance;
+    protected double rate;
+    protected int firstdate;
+    protected int firstyear;
+    protected int seconddate;
+    protected int secondyear;
+    protected Calendar date1 = new GregorianCalendar();
+    protected Calendar date2 = new GregorianCalendar();
+    protected boolean firstdateflag = false;
+    protected int acctNumber;
+    protected String acctName;
+    protected String acctPIN;
     
     Account(int bal, int num, String name, String PIN){
         balance = bal;
