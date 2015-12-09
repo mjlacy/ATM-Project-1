@@ -26,7 +26,7 @@ class Account implements Serializable{
     protected String acctName;
     protected String acctPIN;
     
-    Account(int bal, int num, String name, String PIN){
+    public Account(int bal, int num, String name, String PIN){
         balance = bal;
         acctNumber = num;
         acctName = name;
@@ -41,7 +41,7 @@ class Account implements Serializable{
         return acctPIN;
     }
     
-    void Menu()
+    public void Menu()
     {
         Scanner sc = new Scanner(System.in);
         try{
@@ -118,7 +118,7 @@ class Account implements Serializable{
         }   
     }
     
-    private void Deposit()
+    protected void Deposit()
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("\nHow much would you like to deposit? $");
@@ -134,7 +134,7 @@ class Account implements Serializable{
         }        
     }
     
-    private void Withdraw()
+    protected void Withdraw()
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("\nHow much would you like to withdraw? $");
@@ -157,12 +157,12 @@ class Account implements Serializable{
         }    
     }
     
-    private void CheckBalance()
+    protected void CheckBalance()
     {
         System.out.println("\nYour balance is: " + NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(balance));
     }
     
-    private void getDate1(){
+    protected void getDate1(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter today's date in the format: mm/dd/yyyy");
         String input = sc.next();
@@ -178,7 +178,7 @@ class Account implements Serializable{
         firstdateflag = true;
     }
     
-    private void getDate2(){
+    protected void getDate2(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter today's date in the format: mm/dd/yyyy");
         String input = sc.next();
@@ -198,7 +198,7 @@ class Account implements Serializable{
         }
     }
     
-    private void getInterest()
+    protected void getInterest()
     {
         int datediff = seconddate - firstdate;
         rate = .05/365;
