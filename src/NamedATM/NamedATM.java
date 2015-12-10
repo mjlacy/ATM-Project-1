@@ -20,7 +20,7 @@ public class NamedATM {
         A.runATM();
     }
     
-    void greeting() 
+    void greeting()
     {       
         Scanner sc= new Scanner(System.in);
         System.out.println("Welcome, is this your first time using the ATM? (Y/N)");
@@ -40,7 +40,8 @@ public class NamedATM {
         }
     }
     
-    void runATM() {
+    void runATM() 
+    {
         try
         {
            saveAccounts();
@@ -55,7 +56,8 @@ public class NamedATM {
         runATM();      
     }
     
-    void populateAcct(){
+    void populateAcct()
+    {
         Scanner sc = new Scanner(System.in);
         int index = -99;
         for(int i = 0; i<myAccounts.length; i++)
@@ -118,12 +120,14 @@ public class NamedATM {
         }    
     }    
         
-    void selectAcct(){
+    void selectAcct()
+    {
         Scanner sc = new Scanner(System.in);
         int num = -99;
         String name, PIN;
         
-        try{
+        try
+        {
            System.out.println("\nEnter your account name");
            name = sc.nextLine();
            System.out.println("\nEnter your PIN");
@@ -143,7 +147,8 @@ public class NamedATM {
            System.out.println();
            myAccounts[num].Menu();
         }
-        catch(ArrayIndexOutOfBoundsException exc){
+        catch(ArrayIndexOutOfBoundsException exc)
+        {
              System.out.println("\nInvalid Input");
              selectAcct();
         } 
