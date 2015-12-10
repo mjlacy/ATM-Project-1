@@ -10,7 +10,8 @@ import java.util.*;
  *
  * @author ml4kb
  */
-public class NamedATM {
+public class NamedATM 
+{
     private Account[] myAccounts = new Account[3];    
     public static void main(String[] args) throws Exception
     {
@@ -132,16 +133,16 @@ public class NamedATM {
            name = sc.nextLine();
            System.out.println("\nEnter your PIN");
            PIN = sc.nextLine();
-           if(name.equalsIgnoreCase(myAccounts[0].getName())){
-              if(PIN.equalsIgnoreCase(myAccounts[0].getPIN()))
+           if(name.equalsIgnoreCase(myAccounts[0].getName()) && PIN.equalsIgnoreCase(myAccounts[0].getPIN()))
+           {
                  num=0;
            }
-           else if(name.equalsIgnoreCase(myAccounts[1].getName())){
-              if(PIN.equalsIgnoreCase(myAccounts[1].getPIN())) 
+           else if(name.equalsIgnoreCase(myAccounts[1].getName()) && PIN.equalsIgnoreCase(myAccounts[1].getPIN()))
+           {
                  num=1;
            }  
-           else if(name.equalsIgnoreCase(myAccounts[2].getName())){
-               if(PIN.equalsIgnoreCase(myAccounts[2].getPIN()))
+           else if(name.equalsIgnoreCase(myAccounts[2].getName()) && PIN.equalsIgnoreCase(myAccounts[2].getPIN()))
+           {
                num=2;
            }   
            System.out.println();
