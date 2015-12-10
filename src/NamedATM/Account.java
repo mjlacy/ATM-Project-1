@@ -26,18 +26,21 @@ class Account implements Serializable{
     protected String acctName;
     protected String acctPIN;
     
-    public Account(int bal, int num, String name, String PIN){
+    public Account(int bal, int num, String name, String PIN)
+    {
         balance = bal;
         acctNumber = num;
         acctName = name;
         acctPIN = PIN;
     }
     
-    String getName(){
+    String getName()
+    {
         return acctName;
     }
     
-    String getPIN(){
+    String getPIN()
+    {
         return acctPIN;
     }
     
@@ -66,11 +69,13 @@ class Account implements Serializable{
 
             if(input==1)
             {
-                if(firstdateflag == false){    
+                if(firstdateflag == false)
+                {    
                     getDate1();    
                     Deposit();
                 }
-                else if(firstdateflag == true){
+                else if(firstdateflag == true)
+                {
                     getDate2();
                     getInterest();
                     Deposit();
@@ -78,11 +83,13 @@ class Account implements Serializable{
             }
             else if (input==2)
             {
-            if(firstdateflag == false){    
+            if(firstdateflag == false)
+            {    
                     getDate1();    
                     Withdraw();
                 }
-                else if(firstdateflag == true){
+                else if(firstdateflag == true)
+                {
                     getDate2();
                     getInterest();
                     Withdraw();
@@ -90,11 +97,13 @@ class Account implements Serializable{
             }
             else if (input==3)
             {
-            if(firstdateflag == false){    
+            if(firstdateflag == false)
+                {    
                     getDate1();    
                     CheckBalance();
                 }
-                else if(firstdateflag == true){
+                else if(firstdateflag == true)
+                {
                     getDate2();
                     getInterest();
                     CheckBalance();
@@ -162,7 +171,8 @@ class Account implements Serializable{
         System.out.println("\nYour balance is: " + NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(balance));
     }
     
-    protected void getDate1(){
+    protected void getDate1()
+    {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter today's date in the format: mm/dd/yyyy");
         String input = sc.next();
@@ -178,7 +188,8 @@ class Account implements Serializable{
         firstdateflag = true;
     }
     
-    protected void getDate2(){
+    protected void getDate2()
+    {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter today's date in the format: mm/dd/yyyy");
         String input = sc.next();
